@@ -1,18 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 .thank-you-box{
-    display: block;
+    display: none;
     text-align: center;
 }
 
 .rating-box{
-    display: none;
+    display: block;
 }
 
 ul{
@@ -41,6 +42,7 @@ p, .circle{
 
 p{
     line-height: 25px;
+    font-size: 15px;
 }
 
 .circle{
@@ -60,11 +62,13 @@ h1{
     margin-bottom: 20px;
 }
 
+/* challenge 1, padding is expanding the main-content-box, instead of compressing the content inside it */
+/* box-sizing: border-box seems to fix it */
 .main-content-box{
     width: 415px;
     height: 410px;
-    border-radius: 25px;
-    padding: 30px;
+    border-radius: 30px;
+    padding: 35px;
     background:-webkit-radial-gradient(top, hsl(213, 19%, 18%),hsl(210, 8%, 10%))
 }
 
@@ -78,6 +82,7 @@ h1{
     font-weight: 700;
     font-size: medium;
     letter-spacing: 1px;
+    border: 0;
 }
 
 .btn:hover{
@@ -103,7 +108,7 @@ h1{
 .score-rating{
     color: hsl(25, 97%, 53%);
     background-color: hsl(213, 19%, 18%);
-    margin: 25px 100px;
+    margin: 25px 50px;
     border-radius: 30px;
     padding: 5px;
 }
